@@ -6,10 +6,6 @@ import Router from './router.js';
  * used for future reference.
  */
 
-Router.registerRoute(Constants.GET_EXAMPLE_MESSAGE, args => {
-  return `/getExampleMessage/${args.id}`;
-});
-
 Router.registerRoute(Constants.LOG_IN, args => {
   return `/login`;
 });
@@ -27,4 +23,17 @@ Router.registerRoute(Constants.SEND_PASSWORD_RESET, args => {
 });
 Router.registerRoute(Constants.RESET_PASSWORD_REQUEST, args => {
   return `/password/reset`;
+});
+
+Router.registerRoute(Constants.LOAD_TODOS, args => {
+  return `/todos`;
+});
+Router.registerRoute(Constants.ADD_TODO, args => {
+  return `/todos`;
+});
+Router.registerRoute(Constants.UPDATE_TODO, args => {
+  return `/todos/${args.id}`;
+});
+Router.registerRoute(Constants.ARCHIEVE_TODO, args => {
+  return `/todos/${args.id}/archieve`;
 });

@@ -1,12 +1,10 @@
 import React from 'react';
 
 import AppDispatcher from '../dispatcher.js';
-import ExampleStore from '../stores/ExampleStore.js';
-
-import { Label } from 'react-bootstrap';
+import AppStore from '../stores/AppStore.js';
 
 import {
-  GET_EXAMPLE_MESSAGE,
+  LOAD_TODOS,
   MAIN_ID
 } from '../constants.js';
 
@@ -30,10 +28,10 @@ export default class App extends React.Component {
     ExampleStore.on(MAIN_ID, this._onChange.bind(this));
 
     AppDispatcher.dispatch({
-      action: GET_EXAMPLE_MESSAGE,
+      action: LOAD_TODOS,
       id: 1,
       emitOn: [{
-        store: ExampleStore,
+        store: AppStore,
         componentIds: [MAIN_ID]
       }]
     })
@@ -46,14 +44,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <div>
-            Your Laravel/React App!! This example will show a message...
-        </div>
-        <h3>
-          <Label bsStyle='success'>
-              {this.state.exampleMessage}
-          </Label>
-        </h3>
+        
       </div>
     );
   }

@@ -1,3 +1,5 @@
-Laravel-React-Template
+It's Simple Todo
 
-Please consult the Wiki https://github.com/redferret/Laravel-React-Template/wiki
+A Todo App that allows a user to track progress on their daily tasks. Drag and drop cards, similar to Trello, but with only four columns... Todo, Active, Done, and Archieved. 
+
+Future plans are to implement a Google Calendar API so that events can be saved on a user's Google Calendar. By default notifications can be added to send automatic emails when a task needs to be completed.
